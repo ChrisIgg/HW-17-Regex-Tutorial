@@ -1,6 +1,6 @@
-# Title (replace with your title)
+# Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+Regex is short for regular expressions.  They are used to identify particular characters and patterns through a coded search query.  This search method has a specific syntax, and, once implemented, has powerful abilities to validate and identify complex structures within your code that typical search options couldn't achieve.
 
 ## Summary
 
