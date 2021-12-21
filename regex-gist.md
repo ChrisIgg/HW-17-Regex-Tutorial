@@ -38,9 +38,9 @@ Anchors are ways matching at a particular point in the string.
 - **\b** :
   Matches with positions where one side is a word character, and the other side is not a word character. If "\b" comes before the word, it will match with strings that have a non-word character before the word. If "\b" comes after the word, it will match with strings that have a non-word character after that word.
 
-1. \bdog will match with dog, doggo, doggie
-2. dog\b will match with catdog, dog
-3. \bdog\b will only match with dog
+> 1.  \bdog will match with dog, doggo, doggie
+> 2.  dog\b will match with catdog, dog
+> 3.  \bdog\b will only match with dog
 
 - **\B** :
   In comparison to "/b", "/B" will do the opposite. It will find the word with the "\B" component and it will not recognize a match if there is a non-word character in the position it is referring to.
