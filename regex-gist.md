@@ -4,7 +4,9 @@ Regex is short for regular expressions. They are used to identify particular cha
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Let's look at `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+This is code for matching Hex Values that we will specifically look at in our code snipets.
 
 ## Table of Contents
 
@@ -20,6 +22,9 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 Regular expressions have multiple components that can be utilized to analyze strings/pieces of strings.
+
+regex = / ^The end$/; // exact string match starting with “The” and ending with “End”
+/_ escape characters _/
 
 ### Anchors
 
@@ -45,20 +50,59 @@ Anchors are ways matching at a particular point in the string.
 - **\B** :
   In comparison to "/b", "/B" will do the opposite. It will find the word with the "\B" component and it will not recognize a match if there is a non-word character in the position it is referring to.
 
+HEX Values: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+Code Snipet: `/^#`, `$.`
+
+This asserts that this is the beginning and end of the string respectively.
+
 ### Quantifiers
 
+This will regulate how many numbers of characters or expressions to match in a row. They modify how we interpret the searches such as \d, \w, \s etc.
+
+- An asterisk or a "+" will be seen as greedy, and they will match with as much of the string as possible.
+- - is at least 1 or more matches
+- ? character will make it "non-greedy" and will stop when it has a match, but also accepts 0.
+- Using bracket notation around a positive integer after a character will match with that character if it is used in that word for the amount of times the integer states, or add a comma between two integers to utilize a min max.
+
+HEX Values: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+Code Snipet: `#?`
+
+This asserts that it could either contain a # or not.
+
+Code Snipet: `{6}` and `{3}`
+
+This asserts that the preceding classes will have the 'n' number of characters.
+
 ### Grouping Constructs
+
+- x|y will match either "x" or "y"
 
 ### Bracket Expressions
 
 ### Character Classes
 
+- [abc] will match one of the enclosed characters within the range. It will look for a, or b, or c.
+
+HEX Values: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+Code Snipet: `[a-f0-9]`
+
+This combination implies that we will look for any character between a and f in the alphabet as well as any integer between 0 and 9 in the numeric.
+
 ### The OR Operator
 
-### Flags
+HEX Values: `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 
-### Character Escapes
+Code Snipet: `([a-f0-9]{6}|[a-f0-9]{3})`
+
+This shows that it will either match the expression before or after the '|', in this case it would either be 6 or 3 characters.
 
 ## Author
+
+My name is Chris Insignares. My goal is to learn to build my own effective websties in react and utilize databases to achieve speedy functionality to business data.
+
+You will see new projects in the future at: https://github.com/ChrisIgg
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
